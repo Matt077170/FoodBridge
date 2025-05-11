@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "~/Views/Shared/_SoupKitchen.cshtml";
+    ViewBag.Title = "Find a Soup Kitchen";
+}
+
+<div class="soup-kitchen-container">
+    <header class="soup-header">
+        <img src="~/Content/images/logo.png" alt="Logo" class="logo">
+        <nav class="nav">
+            <a href="#">ABOUT US</a>
+            <a href="#">HOW IT WORKS</a>
+            <a href="#">ABOUT FOOD WASTE</a>
+        </nav>
+        <button class="account-btn">Account</button>
+    </header>
+
+    <section class="kitchen-grid">
+        @if (Model != null && Model.Any())
+        {
+            foreach (var kitchen in Model)
+            {
+                <div class="kitchen-card" onclick="openModel('@kitchen.Name', '@Url.Content(kitchen.Image)')">
+                    <img src="@Url.Content(kitchen.Image)" alt="@kitchen.Name" />
+                    <p>@kitchen.Name</p>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No soup kitchens available at the moment.</p>
+        }
+
+    </section>
+
+
+    <div id="kitchenModel" class="model">
+        <div class="model-content">
+            <span class="close" onclick="closeModel()">&times;</span>
+            <img id="modelImage" src="" alt="Soup Kitchen Image" />
+            <h2 id="modelTitle"></h2>
+            <button class="donate-btn">Donate Now</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Organization Info</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            width: 50px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #3a5d3a;
+            font-weight: bold;
+        }
+
+        .account-btn {
+            background-color: #fcbfa4;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .form-section {
+            padding: 2rem;
+            background-color: white;
+        }
+
+        .org-form {
+            border: 2px solid #ddd;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+            .org-form h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+        .orange-text {
+            color: #ef7c4c;
+        }
+
+        .green-text {
+            color: #4f7757;
+        }
+
+        .form-grid {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .left-form, .right-form {
+            flex: 1;
+        }
+
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .phone-field {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .flag {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .upload-box {
+            width: 100%;
+            height: 80px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+            .upload-box img {
+                width: 24px;
+                height: 24px;
+            }
+
+        .date-select {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .confirm-btn-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+        }
+
+        .confirm-btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container body-content">
+
+        @RenderBody()
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </div>
+</body>
+</html>

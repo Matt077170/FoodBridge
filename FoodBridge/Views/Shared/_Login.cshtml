@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FoodBridge - Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fef4ed;
+            color: #133b10;
+        }
+
+        header {
+            background: #fff;
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #133b10;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .account-btn {
+            background-color: #fcae91;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        main {
+            background-image: url('your-background-image.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            padding: 40px 5%;
+        }
+
+        .login-info h1 {
+            font-size: 28px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .login-info span {
+            color: #3f7a3b;
+            font-weight: bold;
+        }
+
+        .login-info p {
+            max-width: 500px;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        .login-box {
+            background-color: #f79e65;
+            border-radius: 20px;
+            padding: 30px 25px;
+            max-width: 450px;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+            .login-box h2 {
+                background-color: #5f8660;
+                color: white;
+                margin: -30px -25px 20px -25px;
+                padding: 10px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                text-align: center;
+            }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 8px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #5f8660;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .login-links {
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+
+            .login-links a {
+                text-decoration: none;
+                color: #305432;
+                display: inline-block;
+                margin-top: 5px;
+            }
+
+        .impact-bar {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px 10px;
+            margin-top: 40px;
+        }
+
+            .impact-bar h3 {
+                color: #913d1a;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            .impact-bar p {
+                max-width: 700px;
+                margin: 0 auto 25px auto;
+                font-size: 14px;
+                color: #444;
+            }
+
+        .impact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+            .impact-icons div {
+                text-align: center;
+                font-size: 0.85em;
+                max-width: 100px;
+            }
+
+                .impact-icons div img {
+                    width: 40px;
+                    height: 40px;
+                    margin-bottom: 8px;
+                }
+
+        footer {
+            background-color: #e8e8e8;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left p {
+            font-size: 13px;
+            margin: 5px 0;
+        }
+
+        .footer-btn {
+            background-color: #e6b89c;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container body-content">
+
+        @RenderBody()
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </div>
+</body>
+</html>
+
+
+

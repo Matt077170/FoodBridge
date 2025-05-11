@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Activities</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fffdf8;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff3e6;
+            border-bottom: 1px solid #ccc;
+        }
+
+            .navbar img.logo {
+                height: 50px;
+            }
+
+            .navbar button {
+                background-color: #f18973;
+                border: none;
+                padding: 8px 20px;
+                border-radius: 20px;
+                color: white;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+        /* Section Title */
+        .section-header {
+            text-align: center;
+            padding: 30px 0 10px;
+            font-size: 24px;
+            color: #4a4a4a;
+        }
+
+        /* Event List */
+        .event-list {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .event-card {
+            display: flex;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+            .event-card img {
+                width: 250px;
+                object-fit: cover;
+            }
+
+        .event-details {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .event-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c2c2c;
+        }
+
+        .event-rating {
+            color: #ffa500;
+            margin-bottom: 10px;
+        }
+
+        .event-description {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Gallery */
+        .gallery {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+            .gallery img {
+                width: 150px;
+                height: 150px;
+                margin: 10px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+        .footer {
+            background-color: #fff3e6;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .footer-icons i {
+            margin: 0 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container body-content">
+
+        @RenderBody()
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </div>
+</body>
+</html>

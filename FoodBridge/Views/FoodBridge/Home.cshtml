@@ -1,0 +1,75 @@
+﻿@{
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+    ViewBag.Title = "Home Page";
+}
+
+<html ng-app="FoodBridge">
+<body ng-controller="FoodBridgeController">
+
+    <header>
+        <img src="logo.png" alt="FoodBridge Logo" class="logo">
+        <nav class="nav">
+            <a href="#">ABOUT US</a>
+            <a href="#">HOW IT WORKS</a>
+            <a href="#">ABOUT FOOD WASTE</a>
+            <a href="#">BUSINESS SOLUTIONS</a>
+        </nav>
+        <button class="account-button">Account</button>
+    </header>
+    <div class="main">
+        <h1>Bridging Communities Through Food and Generosity</h1>
+        <p>At FoodBridge, we connect local donors, vendors, and individuals with soup kitchens to reduce food waste and fight hunger. By redistributing surplus food, we ensure that nutritious meals reach those who need them most. Join us in making a difference—one meal at a time.</p>
+        <img src="logo.png" alt="FoodBridge" class="logo">
+    </div>
+    <div class="signup-section">
+       
+            <h2>Sign Up First</h2>
+            <div class="signup-buttons">
+                <button class="signup-button" onclick="location.href='https://localhost:44398/FoodBridge/AdminSignup'">Admin</button>
+                <button class="signup-button" onclick="location.href='https://localhost:44398/FoodBridge/DonorSignup'">Donor</button>
+                <button class="signup-button" onclick="location.href='https://localhost:44398/FoodBridge/RecipientSignup'">Recipients</button>
+                <button class="signup-button" onclick="location.href='https://localhost:44398/FoodBridge/OrgRegister'">Organization</button>
+            </div>
+        </div>
+
+
+
+    <div class="what-we-do">
+        <h3>What We Do</h3>
+        <p>Our efforts in local communities create a ripple effect, connecting donors, vendors, and soup kitchens to reduce food waste and fight hunger.</p>
+        <div class="features">
+            <div class="feature">
+                <img src="connect_icon.png" alt="Connect Communities"><br>
+                Connect Communities
+            </div>
+            <div class="feature">
+                <img src="nourish_icon.png" alt="Nourish the Hungry"><br>
+                Nourish the hungry
+            </div>
+            <div class="feature">
+                <img src="sustainability_icon.png" alt="Promote Sustainability"><br>
+                Promote sustainability
+            </div>
+            <div class="feature">
+                <img src="inspire_icon.png" alt="Inspire Change"><br>
+                Inspire change
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="logo.png" alt="FoodBridge Logo" class="logo-footer">
+            <p>960 SE Sample St, Tampa, Florida</p>
+            <p>(302) 717-0103</p>
+            <p>help@foodbridgeintl.org</p>
+        </div>
+        <div class="footer-right">
+            <button>Donate Surplus Food</button>
+            <button>Request Donations</button>
+            <p>Cookie Policy | Privacy Policy</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+

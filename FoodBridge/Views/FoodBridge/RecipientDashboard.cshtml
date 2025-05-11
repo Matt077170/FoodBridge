@@ -1,0 +1,177 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Activities</title>
+    <link rel="stylesheet" href="~/Content/Site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fffdf8;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #fff3e6;
+            border-bottom: 1px solid #ccc;
+        }
+
+            .navbar img.logo {
+                height: 50px;
+            }
+
+            .navbar button {
+                background-color: #f18973;
+                border: none;
+                padding: 8px 20px;
+                border-radius: 20px;
+                color: white;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+        /* Section Title */
+        .section-header {
+            text-align: center;
+            padding: 30px 0 10px;
+            font-size: 24px;
+            color: #4a4a4a;
+        }
+
+        /* Event List */
+        .event-list {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .event-card {
+            display: flex;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+            .event-card img {
+                width: 250px;
+                object-fit: cover;
+            }
+
+        .event-details {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .event-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c2c2c;
+        }
+
+        .event-rating {
+            color: #ffa500;
+            margin-bottom: 10px;
+        }
+
+        .event-description {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Gallery */
+        .gallery {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+            .gallery img {
+                width: 150px;
+                height: 150px;
+                margin: 10px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+        /* Footer */
+        .footer {
+            background-color: #fff3e6;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .footer-icons i {
+            margin: 0 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="~/Images/logo.png" alt="Logo" class="logo" />
+        <button>Account</button>
+    </div>
+
+    <!-- Section Title -->
+    <div class="section-header">
+        Community Feeding Activities
+    </div>
+
+    <!-- Event List -->
+    <div class="event-list">
+        <!-- Event Card Sample (duplicate this block for more) -->
+        <div class="event-card">
+            <img src="~/Images/event1.jpg" alt="Event Image" />
+            <div class="event-details">
+                <div class="event-title">Feeding Program at Barangay 10</div>
+                <div class="event-rating">
+                    ★★★★★
+                </div>
+                <div class="event-description">
+                    A successful community feeding attended by 50+ kids. Volunteers helped distribute rice meals and fruits.
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat similar .event-card blocks for each entry -->
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+        <h3>Gallery</h3>
+        <img src="~/Images/gallery1.jpg" alt="Gallery Image 1" />
+        <img src="~/Images/gallery2.jpg" alt="Gallery Image 2" />
+        <img src="~/Images/gallery3.jpg" alt="Gallery Image 3" />
+        <img src="~/Images/gallery4.jpg" alt="Gallery Image 4" />
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-icons">
+            <i class="fas fa-utensils"></i>
+            <i class="fas fa-leaf"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <p>&copy; 2025 FoodBridge | Designed with care</p>
+    </div>
+
+</body>
+</html>

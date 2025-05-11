@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+
+<body>
+
+    <header>
+        <img src="logo.png" alt="FoodBridge Logo" class="logo">
+        <nav>
+            <a href="#">ABOUT US</a>
+            <a href="#">HOW IT WORKS</a>
+            <a href="#">ABOUT FOOD WASTE</a>
+        </nav>
+        <button class="account-btn">Account</button>
+    </header>
+
+    <main>
+        <div class="login-info">
+            <h1>Bridging Communities Through<br><span>Food and Generosity</span></h1>
+            <p>
+                At FoodBridge, we connect local donors, vendors, and individuals with soup kitchens to reduce food waste and fight hunger.
+                By redistributing surplus food, we ensure that nutritious meals reach those who need them most.
+            </p>
+        </div>
+
+        <div class="login-box">
+            <h2>LOGIN</h2>
+            <form>
+                <label for="username">Username/Email *</label>
+                <input type="text" id="username" placeholder="Enter Username or Email">
+
+                <label for="password">Password *</label>
+                <input type="password" id="password" placeholder="Enter Password">
+
+                <button type="submit">LOGIN</button>
+
+                <div class="login-links">
+                    <a href="#">Forgot password?</a><br>
+                    <a href="#">Don’t have an account?</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="impact-bar">
+            <h3>What We Do</h3>
+            <p>
+                Our efforts in local communities create a ripple effect, connecting donors, vendors, and soup kitchens to reduce food waste and fight hunger.
+            </p>
+            <div class="impact-icons">
+                <div><img src="connect.png" alt=""><p>Connect Communities</p></div>
+                <div><img src="nourish.png" alt=""><p>Nourish the hungry</p></div>
+                <div><img src="sustainability.png" alt=""><p>Promote sustainability</p></div>
+                <div><img src="inspire.png" alt=""><p>Inspire change</p></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <img src="logo.png" alt="Logo" class="logo" style="height: 40px;">
+            <p>900 De Ville, Muntinlupa, Philippines</p>
+            <p>(02) 777-0307</p>
+            <p>help@foodbridge.net</p>
+        </div>
+        <div class="footer-right">
+            <button class="footer-btn">Donate Surplus Food</button>
+            <button class="footer-btn">Request Donations</button>
+        </div>
+    </footer>
+
+</body>

@@ -1,0 +1,96 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/_OrgInfo.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Organization Info</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" class="logo" alt="Logo">
+        <nav>
+            <a href="#">ABOUT US</a>
+            <a href="#">HOW IT WORKS</a>
+            <a href="#">ABOUT FOOD WASTE</a>
+        </nav>
+        <button class="account-btn">Account</button>
+    </header>
+
+    <section class="form-section">
+        <form class="org-form">
+            <h2><span class="orange-text">What is</span> <span class="green-text">your Organization Information</span></h2>
+            <div class="form-grid">
+                <div class="left-form">
+                    <label>ORGANIZATION NAME:</label>
+                    <input type="text" placeholder="ORGANIZATION NAME">
+
+                    <label>FULL ADDRESS:</label>
+                    <input type="text" placeholder="BARANGAY/MUNICIPALITY/PROVINCIAL">
+
+                    <label>NAME OF CONTACT PERSON:</label>
+                    <input type="text" placeholder="NAME">
+
+                    <label>POSITION OF CONTACT PERSON:</label>
+                    <input type="text" placeholder="NAME">
+
+                    <label>PHONE NUMBER:</label>
+                    <div class="phone-field">
+                        <span class="flag">🇵🇭 +63</span>
+                        <input type="text" placeholder="PHONE NUMBER">
+                    </div>
+
+                    <label>EMAIL ADDRESS:</label>
+                    <input type="email" placeholder="EMAIL ADDRESS">
+                </div>
+
+                <div class="right-form">
+                    <label>DONATION REQUEST:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox"> Clothes</label>
+                        <label><input type="checkbox"> Hygiene Kits</label>
+                        <label><input type="checkbox"> Bottled Water</label>
+                        <label><input type="checkbox"> Blankets</label>
+                        <label><input type="checkbox"> School Supplies</label>
+                        <label><input type="checkbox"> Cooked Meals</label>
+                        <label><input type="checkbox"> Shoes</label>
+                        <label><input type="checkbox"> Monetary Donation</label>
+                        <label><input type="checkbox"> Fresh Produce</label>
+                        <label><input type="checkbox"> Kitchenware</label>
+                        <label><input type="checkbox"> Medical Supplies</label>
+                        <label><input type="checkbox"> Canned Goods</label>
+                        <label><input type="checkbox"> Baby Essentials</label>
+                        <label><input type="checkbox"> Grocery Vouchers</label>
+                        <label><input type="checkbox"> Non-perishable Food</label>
+                    </div>
+
+                    <label>EVENT TYPE FOR DONATION:</label>
+                    <input type="text" placeholder="EVENT NAME">
+
+                    <label>UPLOAD IMAGES:</label>
+                    <div class="upload-box">
+                        <img src="upload_icon.png" alt="Upload">
+                    </div>
+
+                    <label>SELECT DATE:</label>
+                    <div class="date-select">
+                        <select><option>Month</option></select>
+                        <select><option>Day</option></select>
+                        <select><option>Year</option></select>
+                    </div>
+                </div>
+            </div>
+            <div class="confirm-btn-container">
+                <button type="submit" class="confirm-btn" onclick="location.href='https://localhost:44398/FoodBridge/OrgUpload'">Confirm</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
