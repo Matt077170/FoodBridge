@@ -75,7 +75,11 @@ namespace FoodBridge.Controllers
 
             return View();
         }
+        
+        public ActionResult OrgDashboard()
+        {
+            return View();
+        }
 
- 
     }
 }

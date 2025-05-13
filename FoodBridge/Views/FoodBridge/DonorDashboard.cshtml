@@ -1,7 +1,444 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "DonorDashboard";
 }
 
-<h2>DonorDashboard</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodBridge</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+        }
+
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #f6ab8f;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+            .header-left img.logo {
+                height: 50px;
+                margin-right: 10px;
+            }
+
+            .header-left .title {
+                font-size: 24px;
+                font-weight: bold;
+                color: white;
+            }
+
+        .header-right img.profile {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-right: 1px solid #eee;
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .app-name {
+            font-size: 1.5em;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .navigation {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            color: #555;
+            text-decoration: none;
+        }
+
+            .nav-item:hover {
+                color: #007bff;
+            }
+
+            .nav-item svg {
+                width: 24px;
+                height: 24px;
+                margin-right: 10px;
+                fill: currentColor;
+                background-color: #ddd;
+                border-radius: 4px;
+            }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+
+        .profile-image-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            background-color: #aaa;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            flex-grow: 1;
+        }
+
+        .username {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .location {
+            color: #777;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+            .location svg {
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+                fill: currentColor;
+                background-color: #ddd;
+                border-radius: 2px;
+            }
+
+        .profile-actions button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .create-post-button {
+            background-color: #f0f0f0;
+            color: #333;
+            margin-right: 10px;
+        }
+
+        .edit-profile-button {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .explore-organizations {
+            margin-bottom: 20px;
+        }
+
+        .explore-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .explore-title {
+            font-size: 1.2em;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .see-all {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .organization-list {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .organization-card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            width: 150px;
+            flex-shrink: 0;
+            padding: 10px;
+            text-align: center;
+        }
+
+            .organization-card img {
+                width: 100%;
+                height: 80px;
+                object-fit: cover;
+                border-radius: 4px;
+                margin-bottom: 5px;
+                background-color: #eee;
+            }
+
+        .organization-name {
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .organization-description {
+            font-size: 0.8em;
+            color: #777;
+        }
+
+        .posts-header {
+            font-size: 1.2em;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .post {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .post-profile-image-container {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+
+        .post-profile-image {
+            width: 100%;
+            height: 100%;
+            background-color: #aaa;
+            object-fit: cover;
+        }
+
+        .post-info {
+            flex-grow: 1;
+        }
+
+        .post-username {
+            font-weight: bold;
+            color: #333;
+            font-size: 0.9em;
+            margin-bottom: 2px;
+        }
+
+        .post-timestamp {
+            color: #777;
+            font-size: 0.8em;
+        }
+
+        .post-status {
+            color: green;
+            font-size: 0.8em;
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+
+            .post-status svg {
+                width: 14px;
+                height: 14px;
+                fill: currentColor;
+                margin-left: 5px;
+                background-color: #ccffcc;
+                border-radius: 2px;
+            }
+
+        .post-content {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .post-image-container {
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .post-image {
+            width: 100%;
+            display: block;
+            background-color: #eee;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="header">
+            <div class="header-left">
+                <img src="https://i.imgur.com/VJjP5lw.png" alt="Logo" class="logo" />
+                <div class="title">Food Bridge</div>
+            </div>
+            <div class="header-right">
+                <img src="https://i.imgur.com/DEjziFv.png" alt="Profile" class="profile" />
+            </div>
+        </div>
+
+        <div class="container">
+            <aside class="sidebar">
+                <div class="logo-container">
+                    <div class="logo"></div>
+                    <div class="app-name">FoodBridge</div>
+                </div>
+                <nav class="navigation">
+                    <a href="#" class="nav-item"><svg></svg> <span>Recent</span></a>
+                    <a href="#" class="nav-item"><svg></svg> <span>Notifications</span></a>
+                    <a href="#" class="nav-item"><svg></svg> <span>Messages</span></a>
+                    <a href="#" class="nav-item"><svg></svg> <span>Explore</span></a>
+                    <a href="#" class="nav-item"><svg></svg> <span>Know More</span></a>
+                    <a href="#" class="nav-item"><svg></svg> <span>Log-out</span></a>
+                </nav>
+            </aside>
+
+            <main class="main-content">
+                <header class="profile-header">
+                    <div class="profile-image-container">
+                        <div class="profile-image"></div>
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="username">maffea</h1>
+                        <div class="location"><svg></svg> <span>Sampaloc, Manila</span></div>
+                        <div class="profile-actions">
+                            <button class="create-post-button">+ Create Post</button>
+                            <button class="edit-profile-button">Edit Profile</button>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="explore-organizations">
+                    <div class="explore-header">
+                        <h2 class="explore-title">Explore Organizations You Can Help</h2>
+                        <a href="#" class="see-all">See All</a>
+                    </div>
+                    <div class="organization-list">
+                        <div class="organization-card">
+                            <img src="#" alt="Missionaries of Charity">
+                            <h3 class="organization-name">Missionaries of Charity</h3>
+                            <p class="organization-description">Elderly People</p>
+                        </div>
+                        <div class="organization-card">
+                            <img src="#" alt="Tuluyan San Benito">
+                            <h3 class="organization-name">Tuluyan San Benito</h3>
+                            <p class="organization-description">(Shelter for the Homeless)</p>
+                        </div>
+                        <div class="organization-card">
+                            <img src="#" alt="Arnold Janssen Kalinga Center">
+                            <h3 class="organization-name">Arnold Janssen Kalinga Center</h3>
+                        </div>
+                        <div class="organization-card">
+                            <img src="#" alt="Don Bosco Youth Center">
+                            <h3 class="organization-name">Don Bosco Youth Center</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="posts-section">
+                    <h2 class="posts-header">Posts</h2>
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="post-profile-image-container">
+                                <div class="post-profile-image"></div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-username">maffea</div>
+                                <div class="post-timestamp">May 4 at 1:09 PM</div>
+                            </div>
+                            <div class="post-status">
+                                Status: Received <svg></svg>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            LF: May need ng 20 kg. rice
+                        </div>
+                        <div class="post-image-container">
+                            <img src="#" alt="Rice" class="post-image">
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>

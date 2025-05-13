@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodBridge Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Top Nav */
+        .top-nav {
+            background-color: #f9c8b3;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            justify-content: space-between;
+        }
+
+            .top-nav img.logo {
+                height: 30px;
+            }
+
+        /* Layout */
+        .container {
+            display: flex;
+            height: calc(100vh - 60px);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 200px;
+            background-color: white;
+            border-right: 1px solid #ddd;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 25px;
+        }
+
+            .sidebar h2 {
+                color: #88a06c;
+                font-weight: 600;
+                font-size: 18px;
+            }
+
+            .sidebar a {
+                text-decoration: none;
+                color: #333;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            background-color: #fdfdfd;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+            .profile-info img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+
+            .profile-info .name-address {
+                display: flex;
+                flex-direction: column;
+            }
+
+        .name-address h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .name-address p {
+            margin: 2px 0;
+            font-size: 13px;
+            color: #444;
+        }
+
+        .profile-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+            .profile-actions button {
+                border: none;
+                border-radius: 6px;
+                padding: 8px 14px;
+                font-size: 13px;
+                cursor: pointer;
+            }
+
+        .request-btn {
+            background-color: #d3e1d1;
+            color: #2e512f;
+        }
+
+        .edit-btn {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .profile-details {
+            margin-top: 30px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            background: #fff;
+            font-size: 14px;
+            color: #333;
+        }
+
+            .profile-details b {
+                display: inline-block;
+                margin-top: 15px;
+            }
+
+        .gallery {
+            display: flex;
+            margin-top: 20px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+            .gallery img {
+                width: 100px;
+                height: 100px;
+                border-radius: 8px;
+                object-fit: cover;
+            }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navbar -->
+    <div class="top-nav">
+        <img src="logo.png" alt="FoodBridge Logo" class="logo">
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>FoodBridge</h2>
+            <a href="#"><img src="icon-browse.png" alt="" width="16">Browse</a>
+            <a href="#"><img src="icon-requests.png" alt="" width="16">Requests</a>
+            <a href="#"><img src="icon-messages.png" alt="" width="16">Messages</a>
+            <a href="#"><img src="icon-history.png" alt="" width="16">History</a>
+            <a href="#"><img src="icon-logout.png" alt="" width="16">Log-out</a>
+        </div>
+
+        <!-- Main Profile Content -->
+        <div class="main-content">
+            <div class="profile-header">
+                <div class="profile-info">
+                    <img src="profile-picture.jpg" alt="Profile Photo">
+                    <div class="name-address">
+                        <h3>Arnold Janssen Kalinga Center</h3>
+                        <p>📍 2160 Visayan Avenue Brgy. 566, Sampaloc, Manila</p>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="request-btn">+ Request Donation</button>
+                    <button class="edit-btn">✎ Edit Profile</button>
+                </div>
+            </div>
+
+            <div class="profile-details">
+                <p>St. Arnold Janssen KALINGA Center (AJKC), founded more than four years ago, continues to be a beacon of hope of Manila’s many homeless and poor people. It has welcomed within its doors many people who were neglected, abandoned and forgotten by mainstream society.</p>
+                <p>KALINGA is an acronym for the programs offered by the center: Kain-Aral-LIgo-naNG-umAyos (Eat, Learn, Bathe, to be Well).</p>
+
+                <b>OPERATING HOURS</b>
+                <p>Monday to Saturday, 8:00 AM – 5:00 PM</p>
+
+                <b>LOCATION</b>
+                <p>Catholic Trade Building<br>1916 Oroquieta Road, Sta. Cruz, Manila</p>
+
+                <b>CONTACT</b>
+                <p>ajkalingafoundation@gmail.com<br>+63 961 240 8692</p>
+
+                <div class="gallery">
+                    <img src="img1.jpg" alt="Gallery 1">
+                    <img src="img2.jpg" alt="Gallery 2">
+                    <img src="img3.jpg" alt="Gallery 3">
+                    <img src="img4.jpg" alt="Gallery 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
