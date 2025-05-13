@@ -1,0 +1,140 @@
+﻿
+@{
+    ViewBag.Title = "DonorCPost";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Post - FoodBridge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .popup {
+            width: 450px;
+            background: white;
+            margin: 50px auto;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+
+            .popup h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .back-arrow {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-list label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .image-upload {
+            width: 100%;
+            height: 110px;
+            background: #f1f1f1;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+        .pickup-options label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .post-btn {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+            .post-btn button {
+                background-color: #FF8C5A;
+                color: white;
+                padding: 10px 24px;
+                border: none;
+                border-radius: 6px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <div class="back-arrow">&#8592;</div>
+        <h2>Create post</h2>
+
+        <div class="section-title">Condition:</div>
+        <div class="checkbox-list">
+            <label><input type="checkbox"> Food is within expiration date</label>
+            <label><input type="checkbox"> Properly stored and not spoiled</label>
+            <label><input type="checkbox"> No damaged or opened packaging</label>
+            <label><input type="checkbox"> Fresh produce is not rotten</label>
+            <label><input type="checkbox"> No signs of contamination (e.g., mold, pests)</label>
+            <label><input type="checkbox"> Stored at appropriate temperatures</label>
+            <label><input type="checkbox"> Packaging is intact and hygienic</label>
+            <label><input type="checkbox"> Food is prepared with safety standards</label>
+        </div>
+
+        <div class="section-title">Expiration Date:</div>
+        <input type="date">
+        <small>Attach image of expiration date/best-before (if applicable):</small>
+        <div class="image-upload">📷 Upload Expiry Image</div>
+
+        <div class="section-title">Pick-up or Drop-off:</div>
+        <div class="pickup-options">
+            <label><input type="checkbox"> Drop-off</label>
+            <label><input type="checkbox"> Request pickup</label>
+            <label><input type="checkbox"> Same-day delivery logistics (Lalamove, GrabExpress)</label>
+        </div>
+
+        <div class="post-btn">
+            <button>POST</button>
+        </div>
+    </div>
+</body>
+</html>
+
+

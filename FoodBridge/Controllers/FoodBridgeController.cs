@@ -80,6 +80,14 @@ namespace FoodBridge.Controllers
         {
             return View();
         }
+        public ActionResult DonorCPost()
+        {
+            return View();
+        }
 
+        public ActionResult DonorRecent()
+        {
+            return View();
+        }
     }
 }

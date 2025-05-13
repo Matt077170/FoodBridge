@@ -989,6 +989,8 @@
     <Content Include="Views\FoodBridge\DonorDashboard.cshtml" />
     <Content Include="Views\Shared\_DonorDashboard.cshtml" />
     <Content Include="Views\FoodBridge\OrgDashboard.cshtml" />
+    <Content Include="Views\FoodBridge\DonorCPost.cshtml" />
+    <Content Include="Views\FoodBridge\DonorRecent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

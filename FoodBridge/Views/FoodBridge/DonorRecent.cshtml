@@ -1,0 +1,172 @@
+﻿
+@{
+    ViewBag.Title = "DonorRecent";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donation Recap</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+        }
+
+        .container-side {
+            display: flex;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 20px;
+            overflow: hidden; /* To contain rounded borders of inner elements */
+        }
+
+        .sidebar img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            object-fit: contain;
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+
+            .sidebar a .icon {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                /* You'll need to add background images or SVG for the icons */
+                background-color: #ccc; /* Placeholder for icon background */
+                mask-size: cover;
+                -webkit-mask-size: cover;
+            }
+
+            /* Example for icons using background images (replace with your actual icons) */
+            .sidebar a:nth-child(2) .icon { /* Recent */
+                /* background-image: url('recent-icon.png'); */
+                -webkit-mask-image: url('recent-icon.svg');
+                mask-image: url('recent-icon.svg');
+                background-color: #555; /* Adjust icon color */
+            }
+
+            .sidebar a:nth-child(3) .icon { /* Notifications */
+                /* background-image: url('notifications-icon.png'); */
+                -webkit-mask-image: url('notifications-icon.svg');
+                mask-image: url('notifications-icon.svg');
+                background-color: #555;
+            }
+
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px 40px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .recap-box {
+            background-color: #D9CDBF;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+            border-top: 40px solid #6B8E6F;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+            .recap-box::before {
+                content: "DONATION RECAP";
+                position: absolute;
+                top: -30px;
+                left: 20px;
+                background-color: #6B8E6F;
+                color: white;
+                font-weight: bold;
+                padding: 4px 12px;
+                border-radius: 6px 6px 0 0;
+                font-size: 14px;
+            }
+
+            .recap-box p {
+                margin: 10px 0;
+                color: #8A4A27;
+                font-size: 15px;
+            }
+
+            .recap-box .bold {
+                font-weight: bold;
+            }
+
+        .instructions {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .thank-you {
+            font-weight: bold;
+            font-size: 18px;
+            color: #B55127;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .orange-highlight {
+            color: #B55127;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-side">
+        <div class="sidebar">
+            <img src="logo.png" alt="FoodBridge Logo">
+            <a href="#"><span class="icon"></span> Recent</a>
+            <a href="#"><span class="icon"></span> Notifications</a>
+            <a href="#"><span class="icon"></span> Messages</a>
+            <a href="#"><span class="icon"></span> Explore</a>
+            <a href="#"><span class="icon"></span> Know More</a>
+            <a href="#"><span class="icon"></span> Log-out</a>
+        </div>
+
+        <div class="container">
+            <div class="recap-box">
+                <p><span class="bold">Donation ID:</span> #123456789</p>
+                <p><span class="bold">Items Donated:</span> 5 bags of rice, 10 canned goods,<br>2 boxes of fresh produce</p>
+                <p><span class="bold">Pickup or Drop-off:</span> [Details]</p>
+            </div>
+
+            <div class="instructions">
+                <p><strong>Further Instructions:</strong></p>
+
+                <p>If you selected pickup: Please ensure your donation is packed and ready for collection at the scheduled time.</p>
+
+                <p>If you selected drop-off: Please visit the soup kitchen at the agreed-upon schedule to complete your donation.</p>
+
+                <p><strong>Donation Checklist Reminder:</strong> Please double-check that the items you are donating meet the required conditions (e.g., not expired, no spoiled or damaged items). Use our checklist to ensure everything is in good condition for donation.</p>
+
+                <p>If you have any questions or need assistance regarding your donation, please contact the soup kitchen you had agreement with.</p>
+
+                <p class="thank-you">
+                    "Thank you for your generosity! You've made a difference!"
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
